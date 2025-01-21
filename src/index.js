@@ -4,20 +4,20 @@ addEventListener("fetch", (event) => {
 });
 
 const dockerHub = "https://registry-1.docker.io";
-
+const CUSTOM_DOMAIN = "ronsun.top"
 const routes = {
   // production
-  ["docker." + ronsun.top]: dockerHub,
-  ["quay." + ronsun.top]: "https://quay.io",
-  ["gcr." + ronsun.top]: "https://gcr.io",
-  ["k8s-gcr." + ronsun.top]: "https://k8s.gcr.io",
-  ["k8s." + ronsun.top]: "https://registry.k8s.io",
-  ["ghcr." + ronsun.top]: "https://ghcr.io",
-  ["cloudsmith." + ronsun.top]: "https://docker.cloudsmith.io",
-  ["ecr." + ronsun.top]: "https://public.ecr.aws",
+  ["docker." + CUSTOM_DOMAIN]: dockerHub,
+  ["quay." + CUSTOM_DOMAIN]: "https://quay.io",
+  ["gcr." + CUSTOM_DOMAIN]: "https://gcr.io",
+  ["k8s-gcr." + CUSTOM_DOMAIN]: "https://k8s.gcr.io",
+  ["k8s." + CUSTOM_DOMAIN]: "https://registry.k8s.io",
+  ["ghcr." + CUSTOM_DOMAIN]: "https://ghcr.io",
+  ["cloudsmith." + CUSTOM_DOMAIN]: "https://docker.cloudsmith.io",
+  ["ecr." + CUSTOM_DOMAIN]: "https://public.ecr.aws",
 
   // staging
-  ["docker-staging." + ronsun.top]: dockerHub,
+  ["docker-staging." + CUSTOM_DOMAIN]: dockerHub,
 };
 
 function routeByHosts(host) {
